@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gallery</title>
+<style>
+img
+{
+width:100px;
+height:90px;
+}
+th
+{
+  font-size:200;
+  background-color: #f9ddff;
+  padding: 20px;
+}
+body
+{
+font-family:sans-serif
+font-size: 1em;
+text-align: center;
+background-colour: pink;
+}
+table
+{
+background-color: white;
+width:60%;
+}
+
+td
+{
+padding: 25px;
+}
+</style>
+</head>
+<body>
+<table align="center">
+<tr>
+<th colspan="4">Gallery</th>
+</tr>
+
+<tr>
+<td colspan="4">Click on  below to make the image larger.</td>
+</tr>
+
+<tr>
+<td><a href="images/1.jpg" target="blank"><img src="images/1.jpg"></a></td>
+<td><a href="images/2.jpg" target="blank"><img src="images/2.jpg"></a></td>
+<td><a href="images/3.jpg" target="blank"><img src="images/3.jpg"></a></td>
+<td><a href="images/4.jpg" target="blank"><img src="images/4.jpg"></a></td>
+
+</tr>
+<tr>
+<td><a href="images/8.jpg" target="blank"><img src="images/8.jpg"></a></td>
+<td><a href="images/7.jpg" target="blank"><img src="images/7.jpg"></a></td>
+<td><a href="images/5.jpg" target="blank"><img src="images/5.jpg"></a></td>
+<td><a href="images/6.jpg" target="blank"><img src="images/6.jpg"></a></td>
+</tr>
+
+
+</table>
+</body>
+</html>
