@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Welocome To Beach-Side Stay Arnala</title>
+   <link rel="stylesheet" type="text/css" href="CSS/style.CSS">
+
+</head>
+<body>
+   <header>
+      <div class="main">
+        <ul>
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+    
+         </ul>
+      </div> 
+      <div class="title">
+         <h1>Welocome To Beach-Side Stay Arnala</h1>
+      </div> 
+
+      <div class="button">
+          <a href="#" class="btn">WATCH VIDEO</a>
+          <a href="#" class="btn">LEARN MORE</a>
+      </div>
+</body>
+</html>
