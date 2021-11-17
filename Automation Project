@@ -1,0 +1,138 @@
+package project;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class orange1
+{
+
+	public static void main(String[] args) 
+	{
+		//1.Launch browser
+	System.setProperty("webdriver.chrome.driver", "C:\\Users\\OM SAI\\Desktop\\selenium\\chromedriver.exe");
+	WebDriver w=new ChromeDriver();
+	//2.open orange hrm website.
+	w.get("https://opensource-demo.orangehrmlive.com/");
+	
+	//3.To check forgot password.	
+    w.findElement(By.linkText("Forgot your password?")).click();
+    
+    w.findElement(By.name("securityAuthentication[userName]")).sendKeys("Admin");
+    
+    w.findElement(By.id("btnSearchValues")).click();
+     
+   w.findElement(By.id("btnCancel")).click();
+   
+  // 4.To Check login button
+   w.findElement(By.name("txtUsername")).sendKeys("Admin");
+	w.findElement(By.name("txtPassword")).sendKeys("admin123");
+	w.findElement(By.name("Submit")).click();
+	
+    //5.To check Functionality of Recrutment button.
+       w.findElement(By.id("menu_recruitment_viewRecruitmentModule")).click();
+	//Defect
+	//Select s1 = new Select(w.findElement(By.id("candidateSearch_jobTitle")));
+	//  s1.selectByVisibleText("Chief Financial Officer");
+	  
+	  //Select s2 = new Select(w.findElement(By.id("candidateSearch_jobVacancy")));
+	  //s2.selectByVisibleText("Junior Account Assistant");
+	  
+	  //Select s3 = new Select(w.findElement(By.id("candidateSearch_hiringManager")));
+	 // s3.selectByVisibleText("Kevin Mathews");
+	  
+	 // Select s4 = new Select(w.findElement(By.id("candidateSearch_status")));
+	 // s4.selectByVisibleText("");
+       
+       //6. To Check Add  button
+	w.findElement(By.id("btnAdd")).click();
+	
+	//7.To Check Save  Button
+	w.findElement(By.name("addCandidate[firstName]")).sendKeys("Komal");
+	w.findElement(By.name("addCandidate[middleName]")).sendKeys("Ram");
+	w.findElement(By.name("addCandidate[lastName]")).sendKeys("Shinde");
+	w.findElement(By.name("addCandidate[email]")).sendKeys("8464komalshinde@gmail.com");
+	w.findElement(By.name("addCandidate[contactNo]")).sendKeys("9604789855");
+	Select s1 = new Select(w.findElement(By.id("addCandidate_vacancy")));
+	  s1.selectByVisibleText("Junior Account Assistant");
+	  w.findElement(By.name("addCandidate[keyWords]")).sendKeys("12");
+	  w.findElement(By.name("addCandidate[comment]")).sendKeys("Hardworking");
+	  //Select s2 = new Select(w.findElement(By.id("ui-datepicker-month")));
+	  //s2.selectByVisibleText("Feb");
+	  w.findElement(By.name("addCandidate[consentToKeepData]")).click();
+	  w.findElement(By.id("btnSave")).click();
+	  
+	  w.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+	  //To Check Edit Button.
+	// w.findElement(By.id("btnSave")).click();
+	  
+	  //8.To Check Cncel button
+	  w.findElement(By.id("btnBack")).click();
+	  
+	  //9.To Check Delete button
+	  w.findElement(By.name("chkSelectRow[]")).click();
+	  w.findElement(By.id("btnDelete")).click();
+	  
+	  //To Check cancel button
+	  //w.findElement(By.id("btn reset")).click();
+	  
+	  //10.To navigate back
+	  w.navigate().back();
+	  //11.To Check Vacancies button
+	  w.findElement(By.id("menu_recruitment_viewJobVacancy")).click();
+	  //12.to check add button 
+	  //w.findElement(By.id("btnAdd")).click();
+	  //Select s3 = new Select(w.findElement(By.name("addJobVacancy[jobTitle]")));
+	 // s3.selectByValue("Coordinator");
+	  //w.findElement(By.name("addJobVacancy[name]")).sendKeys("Accountunt");
+	  //w.findElement(By.name("addJobVacancy[hiringManager]")).sendKeys("1");
+	  //w.findElement(By.name("addJobVacancy[noOfPositions]")).sendKeys("1");
+	  //w.findElement(By.name("addJobVacancy[description]")).sendKeys("pune");
+	  //w.findElement(By.id("btnSave")).click();
+	  w.navigate().back();
+	  
+	  //13.To Check My Info
+	  w.findElement(By.id("menu_pim_viewMyDetails")).click();
+	  //14.To check Edit button
+	  w.findElement(By.id("btnSave")).click();
+	 
+	  //15.To check save button of personal details.
+	  w.findElement(By.id("btnSave")).click();
+	 
+	 //16.To Check Edit button in Custom Field
+	   w.findElement(By.id("btnEditCustom")).click();
+	   
+	   //17.To Check contact details
+	  w.findElement(By.linkText("Contact Details")).click();
+	  
+	  //18.To Check Edit button for contact details
+	  w.findElement(By.id("btnSave")).click();
+	  
+//19.To Check Add Attachment
+	  w.findElement(By.id("btnAddAttachment")).click();
+	  
+	  //20.To Check Directory button
+	  w.findElement(By.id("menu_directory_viewDirectory")).click();
+	  w.findElement(By.name("searchDirectory[emp_name][empName]")).sendKeys("Komal");
+	  Select s = new Select(w.findElement(By.name("searchDirectory[job_title]")));
+	  s.selectByVisibleText("Chief Executive Officer");
+	  Select s7 = new Select(w.findElement(By.name("searchDirectory[location]")));
+	  s7.selectByVisibleText("All");
+	  
+	  //21.To check search button
+	  w.findElement(By.id("searchBtn")).click();
+	  
+	  //22.To Check Reset button
+	  w.findElement(By.id("resetBtn")).click();
+	  //23.To Check Dashboard button
+	  w.findElement(By.id("menu_dashboard_index")).click();
+	  
+	}
+
+	
+
+
+}
